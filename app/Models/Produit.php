@@ -20,7 +20,7 @@ class Produit extends Model
 
     public function factures()
     {
-        return $this->belongsToMany(Facture::class, 'facture_produit', 'numero_produit', 'numero_facture');
+        return $this->belongsToMany(Facture::class, 'facture_produit', 'numero_produit', 'numero_facture')
                     ->withPivot('quantite');
     }
 }
